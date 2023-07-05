@@ -1,0 +1,11 @@
+<p>{{ title }}</p>
+<div>
+    <div>
+        <p>{{ fromParent }}</p>
+        <h1>to be decorated</h1>
+        <button (click)="sendMessage()">Click me!</button>
+    </div>
+    <div>
+        <app-post-box [postMessage]="postMessage"></app-post-box>
+    </div>
+</div>
