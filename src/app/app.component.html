@@ -1,7 +1,13 @@
 <h1>Angular App</h1>
-<a>{{ fromChild }}</a>
+<!-- <a>{{ fromChild }}</a>
+<p>{{ fromChildOutput }}</p>
 <app-navbar></app-navbar>
 <div>
   <app-left-sidebar></app-left-sidebar>
   <app-post [fromParent]="parentMessage" (messageEvent)="receiveMessage($event)"></app-post>
-</div>
+  <button (click)="onClick()">check</button>
+  <input type='text' (keyup.enter)="onKeyUp(username.value)" #username>
+  <input [value]="textValue" >
+  <input type="text" (keyup.enter)="onKeyUp()" [(ngModel)] ="textValue">
+</div> -->
+<app-demo-forms></app-demo-forms>

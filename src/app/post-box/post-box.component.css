@@ -1,0 +1,15 @@
+.img {
+    height: 10em;
+    width: 10em;
+}
+.center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+}
+.inline-block {
+    display: inline-block;
+}
+.blue-text {
+    color: blue;
+}

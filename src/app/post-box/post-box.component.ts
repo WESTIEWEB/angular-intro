@@ -8,6 +8,10 @@ import { Component, Input } from '@angular/core';
 export class PostBoxComponent {
 
   @Input()
-  postMessage!: string;
+  postBoxMessage!: string;
+
+  initiate: boolean = false;
+
+  imageUrl: string = 'https://picsum.photos/200/300';
 
 }

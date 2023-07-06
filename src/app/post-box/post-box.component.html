@@ -1,2 +1,9 @@
 <p>post-box works!</p>
-<span>{{ postMessage }} </span>
+<div class="center">
+    <span class="inline-block">post: {{ postBoxMessage }} </span>
+    <!-- <span></span> -->
+    
+    <!-- property binding -->
+    <img class="img" [src]="imageUrl" alt="example" />
+</div>
+<p [style.color]="initiate ? 'red' : 'blue'">I am blue</p>

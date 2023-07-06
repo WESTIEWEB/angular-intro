@@ -1,0 +1,45 @@
+<!-- <p>Post Form</p> -->
+<!-- <div>
+    <div class="center">
+        <input type="text" [(ngModel)] = 'textInput' (keyup.enter) = "onkeyUp()">
+        <textarea>
+        </textarea>
+        <input type="text" [(ngModel)] = 'textInput' (keyup.enter) = "onkeyUp()">
+        <input type="text">
+    </div>
+    <div class="background">
+        <input type="checkbox">
+        <span>Add Background</span>
+    </div>
+</div>
+<div>
+    <p>{{ title }}</p>
+    <div>
+        <img [src]="img" >
+    </div>
+</div> -->
+<div class="center">
+    <div class="form-area">
+        <h1 class="text-center">Post Form</h1>
+        <input type="text" placeholder="Post Title" [(ngModel)] = 'postTitle'>
+        <br>
+        <br>
+        <textarea name="" id=""  cols="" rows="" placeholder="Post Details" [(ngModel)] = 'postDetails'>
+        </textarea>
+        <br>
+        <br>
+        <input type="text" placeholder="Post Image URL" [(ngModel)] = 'imageUrl'>
+        <br>
+        <br>
+        <input type="text" placeholder="Post URL" [(ngModel)] = 'postUrl'>
+        <br>
+        <br>
+        <input type="checkbox" [(ngModel)] = 'addBackground' > Add Background
+    </div>
+    <div class="preview-area">
+        <img [src]="imageUrl" [alt]="imageUrl">
+        <h1 ><span class="title" [style.background-color]="addBackground ? 'yellow' : 'inherit'">{{ postTitle }}</span></h1>
+        <p>{{ postDetails }}</p>
+        <a [href]="postUrl" target="_blank" class="text-center" [style.display] = "postUrl ? 'block' : 'none'">More Details</a>
+    </div>
+</div>

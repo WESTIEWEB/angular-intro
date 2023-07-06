@@ -9,7 +9,13 @@ import { PostComponent } from './post/post.component';
 export class AppComponent {
   title = 'first-project';
   fromChild: string = '';
-  parentMessage = "message changed"
+  parentMessage: string = "message changed"
+
+  textValue: string = "coming from component";
+
+  fromChildOutput: string = '';
+
+  fromInput: string = '';
 
   @ViewChild(PostComponent) child!: PostComponent;
 
@@ -19,6 +25,17 @@ export class AppComponent {
   }
 
   receiveMessage($event: any) {
-    this.fromChild = $event
+    this.fromChildOutput = $event;    
+  }
+
+  onClick () {
+    alert ('i was clicked')
+  }
+
+  onKeyUp(value: any = null) {
+    this.fromInput = value;
+      console.log(this.textValue)
+      console.log('fromInput field',this.fromInput)
+ 
   }
 }
