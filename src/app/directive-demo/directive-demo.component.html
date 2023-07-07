@@ -1,0 +1,19 @@
+<p>directive-demo works!</p>
+
+<!-- <ul>
+    <li *ngFor = "let post of postArray">{{ post }}</li>
+</ul> -->
+
+<div>Fetching Object Array</div>
+<br>
+<button (click) = "addNew()">Add New Data</button>
+<div *ngIf = "objArray.length > 0; then show; else error"></div>
+<ng-template #show>
+    <ul *ngFor = "let staff of objArray; let i = index">
+        <li>name: {{ staff['name'] }} <button (click) = "onDelete(i)">Delete</button></li>
+    </ul>
+</ng-template>
+<ng-template #error>
+    <p>No data available.</p>
+</ng-template>
+<!-- <p ngIf = "objectArray.length < 0"> no data available</p> -->

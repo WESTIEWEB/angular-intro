@@ -7,35 +7,35 @@ import { PostComponent } from './post/post.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first-project';
-  fromChild: string = '';
-  parentMessage: string = "message changed"
+  // title = 'first-project';
+  // fromChild: string = '';
+  // parentMessage: string = "message changed"
 
-  textValue: string = "coming from component";
+  // textValue: string = "coming from component";
 
-  fromChildOutput: string = '';
+  // fromChildOutput: string = '';
 
-  fromInput: string = '';
+  // fromInput: string = '';
 
-  @ViewChild(PostComponent) child!: PostComponent;
+  // @ViewChild(PostComponent) child!: PostComponent;
 
-  ngAfterViewInit() {
-    console.log(this.child)
-    this.fromChild = this.child.childMessage
-  }
+  // ngAfterViewInit() {
+  //   console.log(this.child)
+  //   this.fromChild = this.child.childMessage
+  // }
 
-  receiveMessage($event: any) {
-    this.fromChildOutput = $event;    
-  }
+  // receiveMessage($event: any) {
+  //   this.fromChildOutput = $event;    
+  // }
 
-  onClick () {
-    alert ('i was clicked')
-  }
+  // onClick () {
+  //   alert ('i was clicked')
+  // }
 
-  onKeyUp(value: any = null) {
-    this.fromInput = value;
-      console.log(this.textValue)
-      console.log('fromInput field',this.fromInput)
+  // onKeyUp(value: any = null) {
+  //   this.fromInput = value;
+  //     console.log(this.textValue)
+  //     console.log('fromInput field',this.fromInput)
  
-  }
+  // }
 }

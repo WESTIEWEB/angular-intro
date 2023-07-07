@@ -9,6 +9,7 @@ import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
 import { PostComponent } from './post/post.component';
 import { PostBoxComponent } from './post-box/post-box.component';
 import { DemoFormsComponent } from './demo-forms/demo-forms.component';
+import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DemoFormsComponent } from './demo-forms/demo-forms.component';
     PostComponent,
     PostBoxComponent,
     DemoFormsComponent,
+    DirectiveDemoComponent,
   ],
   imports: [
     BrowserModule,
