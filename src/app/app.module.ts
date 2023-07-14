@@ -11,6 +11,9 @@ import { PostBoxComponent } from './post-box/post-box.component';
 import { DemoFormsComponent } from './demo-forms/demo-forms.component';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { NgStylesComponent } from './ng-styles/ng-styles.component';
+import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
+import { AppendPipe } from './Pipes/append.pipe';
+import { SummaryPipe } from './Pipes/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { NgStylesComponent } from './ng-styles/ng-styles.component';
     DemoFormsComponent,
     DirectiveDemoComponent,
     NgStylesComponent,
+    CustomPipeComponent,
+    AppendPipe,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
