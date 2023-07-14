@@ -11,6 +11,13 @@ export class DirectiveDemoComponent {
 
   objArray: Array<Record<string, any>> = [{name: 'John Doe', age: 20}, {name: 'Ilo Doe', age: 30}, {name: 'Mary Dan', age: 22}] 
 
+  //for steps control
+  formStep: number = 1;
+
+  isStep1: boolean = true;
+  isStep2: boolean = false;
+  isStep3: boolean = false;
+
   constructor() {
     this.postArray.forEach((item: string) => {
       console.log(item)
@@ -23,5 +30,13 @@ export class DirectiveDemoComponent {
   }
   onDelete (object: number) {
     this.objArray.splice(object, 1)
+  }
+
+  onSwitch (value: number) {
+    this.formStep = value
+    
+    this.formStep === 1 ? this.isStep1 = true : this.isStep1 = false
+    this.formStep === 2 ? this.isStep2 = true : this.isStep2 = false
+    this.formStep === 3 ? this.isStep3 = true : this.isStep3 = false
   }
 }

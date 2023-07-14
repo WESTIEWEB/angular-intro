@@ -4,7 +4,7 @@
     <li *ngFor = "let post of postArray">{{ post }}</li>
 </ul> -->
 
-<div>Fetching Object Array</div>
+<!-- <div>Fetching Object Array</div>
 <br>
 <button (click) = "addNew()">Add New Data</button>
 <div *ngIf = "objArray.length > 0; then show; else error"></div>
@@ -15,5 +15,30 @@
 </ng-template>
 <ng-template #error>
     <p>No data available.</p>
-</ng-template>
+</ng-template> -->
 <!-- <p ngIf = "objectArray.length < 0"> no data available</p> -->
+
+<!-- ng-if case -->
+<!-- <div class="ng-swicth">
+    <button (click) = "onSwitch(1)" [ngClass]="{'blur': !isStep1}">step 1</button>
+    <button (click) = "onSwitch(2)" [ngClass]="{'blur': !isStep2}">step 2</button>
+    <button (click) = "onSwitch(3)" [ngClass]="{'blur': !isStep3}">step 3</button>
+</div>
+<div class="steps">
+    <div *ngIf = "formStep == 1 ">Step 1 Form</div>
+    <div *ngIf = "formStep == 2">Step 2 Form</div>
+    <div *ngIf = "formStep == 3">Step 3 Form</div>
+</div> -->
+
+<!-- repeating the above using ng-switch case-->
+<div class="ng-swicth">
+    <button (click) = "onSwitch(1)" [ngClass]="{'blur': !isStep1}">step 1</button>
+    <button (click) = "onSwitch(2)" [ngClass]="{'blur': !isStep2}">step 2</button>
+    <button (click) = "onSwitch(3)" [ngClass]="{'blur': !isStep3}">step 3</button>
+</div>
+<div class="steps" [ngSwitch]="formStep">
+    <div *ngSwitchCase = "1">Step 1 Form</div>
+    <div *ngSwitchCase = "2">Step 2 Form</div>
+    <div *ngSwitchCase = "3">Step 3 Form</div>
+    <div *ngSwitchDefault>Default Form</div>
+</div>

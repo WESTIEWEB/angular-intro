@@ -1,0 +1,29 @@
+.ng-swicth {
+    display : flex;
+    padding-left: 1em;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 1em;
+}
+
+
+
+.ng-swicth button {
+    width: 10em;
+    line-height: 2em;
+    background-color: rgba(200, 200, 200, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.blur {
+    opacity: 0.5;
+}
