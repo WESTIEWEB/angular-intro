@@ -1,1 +1,14 @@
-<p>ng-styles works!</p>
+<p>ng-styles Directives!</p>
+<h1 [style.color]="isActive? 'red': 'black'">Angular Udemy Course</h1>
+
+
+<!-- doing the above using ngStyle directive -->
+
+<div>
+    <h1 [ngStyle]="{
+        'color': isActive? 'red': 'black',
+        'font-size': isActive? '2em': '5px',
+        'text-transform': isActive? 'uppercase': 'lowercase',
+    }">Ng style directives</h1>
+    <h2 [class.main]="isActive">Class Binding</h2>
+</div>

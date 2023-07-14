@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./ng-styles.component.css']
 })
 export class NgStylesComponent {
-
+  isActive: boolean = true;
 }
